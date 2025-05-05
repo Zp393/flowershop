@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Elegant Blooms</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .gallery-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery-header h1 {
+      font-size: 2.5em;
+      color: #a0522d;
+      padding-top: 2rem;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .filter-buttons button {
+      background-color: #d2691e;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      margin: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #a0522d;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Elegant Blooms</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <div class="gallery-container">
+    <div class="gallery-header">
+      <h1>Our Signature Bouquets</h1>
+    </div>
+
+    <div class="filter-buttons">
+      <button onclick="filterGallery('all')">All</button>
+      <button onclick="filterGallery('wedding')">Weddings</button>
+      <button onclick="filterGallery('valentine')">Valentine’s</button>
+      <button onclick="filterGallery('mother')">Mother’s Day</button>
+      <button onclick="filterGallery('justbecause')">Just Because</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item wedding">
+        <img src="images/wedd1.jpg" alt="Wedding Bouquet 1">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val1.jpg" alt="Valentine’s Bouquet 1">
+      </div>
+      <div class="gallery-item mother">
+        <img src="images/mot1.jpg" alt="Mother’s Day Bouquet 1">
+      </div>
+      <div class="gallery-item justbecause">
+        <img src="images/just1.jpg" alt="Just Because Bouquet 1">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="images/wedd2.jpg" alt="Wedding Bouquet 2">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val2.jpg" alt="Valentine’s Bouquet 2">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="images/wedd3.jpg" alt="Wedding Bouquet 1">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val3.jpg" alt="Valentine’s Bouquet 1">
+      </div>
+      <div class="gallery-item mother">
+        <img src="images/mot2.jpg" alt="Mother’s Day Bouquet 1">
+      </div>
+      <div class="gallery-item justbecause">
+        <img src="images/just2.jpg" alt="Just Because Bouquet 1">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="images/wedd4.jpg" alt="Wedding Bouquet 2">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val4.jpg" alt="Valentine’s Bouquet 2">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="images/wedd5.jpg" alt="Wedding Bouquet 1">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val6.jpg" alt="Valentine’s Bouquet 1">
+      </div>
+      <div class="gallery-item mother">
+        <img src="images/mot3.jpg" alt="Mother’s Day Bouquet 1">
+      </div>
+      <div class="gallery-item justbecause">
+        <img src="images/just3.jpg" alt="Just Because Bouquet 1">
+      </div>
+      <div class="gallery-item wedding">
+        <img src="images/wedd6.jpg" alt="Wedding Bouquet 2">
+      </div>
+      <div class="gallery-item valentine">
+        <img src="images/val5.jpg" alt="Valentine’s Bouquet 2">
+      </div>
+      <div class="gallery-item mother">
+        <img src="images/mot4.jpg" alt="Mother’s Day Bouquet 1">
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </div>
+
+
+  <footer>
+    <p>&copy; 2025 Elegant Blooms. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all') {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.toggle('hidden', !item.classList.contains(category));
+        }
+      });
+    }
+  </script>
+</body>
+</html>

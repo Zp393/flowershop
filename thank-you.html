@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | Elegant Blooms</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="thank-you-page">
+
+    <div id="loader">
+        <div class="flower-bud"></div>
+      </div>
+
+<header class="hero">
+  <nav>
+    <div class="logo">Elegant Blooms</div>
+  </nav>
+  <div class="hero-content">
+    <h1>Thank You!</h1>
+    <p>Your bouquet is being prepared with love. We'll contact you soon!</p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+</header>
+
+<canvas id="flower-canvas"></canvas>
+
+<button id="mute-button">🌸</button>
+
+<script src="flower-animation.js"></script>
+<script src="loader.js"></script>
+<script>
+    const music = document.getElementById('background-music');
+    const muteButton = document.getElementById('mute-button');
+
+    music.volume = 0.3; // 30% volume for soft background
+    muteButton.addEventListener('click', () => {
+    if (music.muted) {
+      music.muted = false;
+      muteButton.textContent = '🌸'; // Flower emoji
+    } else {
+      music.muted = true;
+      muteButton.textContent = '🔇'; // Muted symbol
+    }
+});
+</script>
+  
+
+<audio id="background-music" src="the-songbirds-135855.mp3" autoplay loop></audio>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elegant Blooms | Flower Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <canvas id="petal-canvas"></canvas> <!-- Flower petals animation -->
+    <nav>
+      <div class="logo">Elegant Blooms</div>
+      <ul class="nav-links">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Welcome to Elegant Blooms</h1>
+      <p>Fresh flowers crafted with love.</p>
+      <a href="#shop" class="btn" id="shopNowBtn">Shop Now</a>
+    </div>
+  </header>
+  
+  
+
+  <section id="shop" class="products">
+    <h2>Our Bouquets</h2>
+    <div class="product-grid">
+
+      
+
+      <div class="product">
+        <img src="images/jessie-daniella-aiNU4cA4UzQ-unsplash.jpg" alt="Bouquet 1">
+        <h3>Blushing Rose</h3>
+        <p>$45</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="item_name" value="Blushing Rose Bouquet">
+            <input type="hidden" name="amount" value="45.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="btn">Buy Now</button>
+          </form>
+      </div>
+      <div class="product">
+        <img src="images/nick-karvounis-8PnMHV05UHU-unsplash.jpg" alt="Bouquet 2">
+        <h3>Sunny Day</h3>
+        <p>$50</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="item_name" value="Blushing Rose Bouquet">
+            <input type="hidden" name="amount" value="45.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="btn">Buy Now</button>
+          </form>
+      </div>
+      <div class="product">
+        <img src="images/tom-kulczycki-IilKsqAemf4-unsplash.jpg" alt="Bouquet 3">
+        <h3>Pure Elegance</h3>
+        <p>$60</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="item_name" value="Blushing Rose Bouquet">
+            <input type="hidden" name="amount" value="45.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="btn">Buy Now</button>
+          </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-track">
+            <div class="testimonial">
+              <img src="images/just1.jpg" alt="Emily R." class="testimonial-img">
+                <p>"Absolutely stunning bouquet! Delivered on time and beautifully arranged."</p>
+                <h4>- Emily R.</h4>
+            </div>
+            <div class="testimonial">
+              <img src="images/just2.jpg" alt="Emily R." class="testimonial-img">
+                <p>"Beautiful arrangement and excellent service!"</p>
+                <h4>- Anna G.</h4>
+            </div>
+            <div class="testimonial">
+              <img src="images/emily.jpg" alt="Emily R." class="testimonial-img">
+                <p>"The flowers lasted over a week! So fresh."</p>
+                <h4>- Mike D.</h4>
+            </div>
+            <div class="testimonial">
+              <img src="images/emily.jpg" alt="Emily R." class="testimonial-img">
+                <p>"Great selection and fantastic customer service!"</p>
+                <h4>- Sarah L.</h4>
+            </div>
+            <div class="testimonial">
+              <img src="images/emily.jpg" alt="Emily R." class="testimonial-img">
+                <p>"The best flowers I've ever ordered online!"</p>
+                <h4>- John S.</h4>
+            </div>
+            <div class="testimonial">
+              <img src="images/emily.jpg" alt="Emily R." class="testimonial-img">
+                <p>"Highly recommend! Will order again!"</p>
+                <h4>- Lisa T.</h4>
+            </div>
+        </div>
+        <button class="slider-btn left" id="slideLeft">&#10094;</button>
+        <button class="slider-btn right" id="slideRight">&#10095;</button>
+    </div>
+</section>
+
+
+  
+  
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: hello@elegantblooms.com</p>
+    <p>Phone: +1 234 567 890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Elegant Blooms. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2>Coming Soon!</h2>
+      <p>Our online shop is opening very soon. Stay tuned for fresh blooms!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

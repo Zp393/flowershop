@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Elegant Blooms</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-page {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .about-page h1 {
+      font-size: 3em;
+      color: #a0522d;
+      margin-bottom: 20px;
+      padding-top: 2rem;
+    }
+
+    .about-page p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .about-highlight {
+      font-weight: bold;
+      color: #d2691e;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .timeline-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #a0522d;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-left: 3px solid #d2691e;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Elegant Blooms</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="about-page">
+    <h1>Our Story</h1>
+    <p>
+      Elegant Blooms was born from a simple idea: <span class="about-highlight">every flower tells a story</span>.
+      What started as a tiny stall with hand-tied roses has blossomed into a premium floral boutique — dedicated to beauty, detail, and unforgettable moments.
+    </p>
+    <br />
+    <p>
+      Our team of passionate floral artists believes that flowers are more than gifts — they’re messages of love, hope, and joy.
+      Each bouquet is crafted with care, using only the freshest blooms sourced from trusted growers.
+    </p>
+    <br />
+    <p>
+      Whether it’s a quiet *I love you*, a grand *Congratulations!*, or a comforting *I’m here for you* — Elegant Blooms is here to help you say it
+      <span class="about-highlight">beautifully</span>.
+    </p>
+    <br />
+    <p>
+      From our hearts to yours, <br />
+      <span class="about-highlight">thank you for letting us bloom with you.</span>
+    </p>
+
+    <section class="timeline-section">
+        <h2 class="timeline-heading">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="year">2019</div>
+            <p>Started as a small flower cart in town, crafting simple hand-tied bouquets with love and hope.</p>
+            <img src="images/zhen-yao-VyXvCwlx-yk-unsplash.jpg" alt="Our first flower cart in 2019">
+          </div>
+          <div class="timeline-item">
+            <div class="year">2020</div>
+            <p>Opened our first floral studio — even during tough times, we bloomed with resilience and care.</p>
+            <img src="images/olena-bohovyk-XOIPvV0ktP8-unsplash.jpg" alt="Our first flower cart in 2019">
+          </div>
+          <div class="timeline-item">
+            <div class="year">2021</div>
+            <p>Launched Elegant Blooms online and began delivering joy one bouquet at a time across the city.</p>
+            <img src="images/naparo-mapendra-rSHMAx_8T28-unsplash.jpg" alt="Our first flower cart in 2019">
+          </div>
+          <div class="timeline-item">
+            <div class="year">2022</div>
+            <p>Introduced our signature collection: curated blooms for weddings, anniversaries, and life’s little moments.</p>
+            <img src="images/pablo-lancaster-jones-GVXimK2WmxE-unsplash.jpg.crdownload" alt="Our first flower cart in 2019">
+          </div>
+          <div class="timeline-item">
+            <div class="year">2023</div>
+            <p>Partnered with local farms to ensure every flower is fresh, sustainable, and full of meaning.</p>
+            <img src="images/leslie-cross-TsdemZ4TLlc-unsplash.jpg" alt="Our first flower cart in 2019">
+          </div>
+        </div>
+      </section>
+      
+  </section>
+
+
+  <script>
+    const timelineItems = document.querySelectorAll('.timeline-item');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    timelineItems.forEach(item => {
+      observer.observe(item);
+    });
+  </script>
+  
+</body>
+</html>
