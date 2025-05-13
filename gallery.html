@@ -19,7 +19,7 @@
 
     .gallery-header h1 {
       font-size: 2.5em;
-      color: #a0522d;
+      color: #fff;
       padding-top: 2rem;
     }
 
@@ -44,9 +44,8 @@
     }
 
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      column-count: 3;
+      column-gap: 1em;
     }
 
     .gallery-item {
@@ -58,8 +57,9 @@
 
     .gallery-item img {
       width: 100%;
-      height: auto;
-      display: block;
+      break-inside: avoid;
+      margin-bottom: 1em;
+      border-radius: 8px;
       transition: transform 0.3s;
     }
 
@@ -73,10 +73,14 @@
   </style>
 </head>
 <body>
+
+  <div class="background-image"></div>
+
   <nav class="nav">
     <div class="logo">Elegant Blooms</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
+      <li><a href="contact.html">Order</a></li>
     </div>
   </nav>
 

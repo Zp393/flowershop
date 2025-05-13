@@ -21,11 +21,25 @@ footer {
   }
   
   body {
+    margin: 0;
     font-family: 'Georgia', serif;
     color: var(--text-color);
-    background-color: var(--background-color);
     scroll-behavior: smooth;
     overflow-x: hidden;
+    position: relative;
+  }
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(images/flowerback.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none; /* ensures it's truly just a background */
+    background-color: #fff; /* fallback color if image doesn't fill */
   }
   
   /* Canvas background (flower petals) */
@@ -202,7 +216,7 @@ footer {
   
   .products {
     padding: 4rem 10%;
-    background-color: #fff8f5;
+    background-color: transparent;
     text-align: center;
   }
   
@@ -275,6 +289,7 @@ footer {
 .products h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    color: #fff;
 }
 
 .product-grid {
@@ -329,14 +344,14 @@ footer {
   .testimonials {
     text-align: center;
     padding: 50px 20px;
-    background: #fff8f5;
+    background: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .testimonials h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #d35400;
+    color: #fff;
 }
 
 .testimonial-img {
@@ -415,15 +430,21 @@ footer {
 }
 
   /* Contact Section */
+  
   .contact {
-    background-color: #f0f0f0;
+    background-color: transparent;
     padding: 4rem 10%;
     text-align: center;
   }
   
   .contact h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: #db5b05;
+  }
+  .contact p{
+    font-size: 2rem;
+    color: #000;
   }
   
   /* Footer */

@@ -1,29 +1,3 @@
-// Modal pop-up with Escape support
-const modal = document.getElementById('modal');
-const shopNowBtn = document.getElementById('shopNowBtn');
-const closeModal = document.getElementById('closeModal');
-
-shopNowBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  modal.style.display = 'flex';
-});
-
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.style.display === 'flex') {
-    modal.style.display = 'none';
-  }
-});
-
 // Falling petals animation with improvements
 const canvas = document.getElementById('petal-canvas');
 const ctx = canvas.getContext('2d');
