@@ -157,6 +157,43 @@ footer {
   .nav-links a:hover {
     color: var(--primary-color);
   }
+
+    /* Navbar mobile responsive */
+
+#mobile-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    width: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .logo{
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+
   
   /* Hero Section */
   .hero {
@@ -206,9 +243,6 @@ footer {
   .btn:hover {
     background-color: var(--secondary-color);
   }
-
-
-
 
 
 
@@ -289,7 +323,7 @@ footer {
 .products h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #fff;
+    color: #db5b05;
 }
 
 .product-grid {
@@ -351,7 +385,7 @@ footer {
 .testimonials h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #fff;
+    color: #db5b05;
 }
 
 .testimonial-img {
@@ -445,6 +479,12 @@ footer {
   .contact p{
     font-size: 2rem;
     color: #000;
+  }
+
+  @media (max-width: 768px){
+    .contact p{
+      font-size: 1.3rem;
+    }
   }
   
   /* Footer */

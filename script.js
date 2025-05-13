@@ -64,6 +64,23 @@ resizeCanvas();
 createPetals();
 animatePetals();
 
+// navbar
+
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+
+  // Toggle icon class between 'bx-menu' and 'bx-x'
+  if (menuToggle.classList.contains('bx-menu')) {
+    menuToggle.classList.replace('bx-menu', 'bx-x');
+  } else {
+    menuToggle.classList.replace('bx-x', 'bx-menu');
+  }
+});
+
+
 // Testimonials 
 let currentIndex = 0;
 const testimonials = document.querySelectorAll('.testimonial');

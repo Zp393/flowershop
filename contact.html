@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Order | Elegant Blooms</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <style>
     .contact-container {
       max-width: 800px;
@@ -46,6 +47,15 @@
     button:hover {
       background-color: #a0522d;
     }
+
+    /* Footer */
+    footer {
+      background-color: var(--text-color);
+      color: white;
+      padding: 1rem 5%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -54,6 +64,8 @@
 
   <nav class="nav">
     <div class="logo">Elegant Blooms</div>
+
+    <i class='bx bx-menu' id="mobile-menu"></i>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
@@ -64,5 +76,27 @@
     <h1>Place an Order or Ask a Question</h1>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrWIYos-n3_L21DRiwk0JekVMYL12aDmHvxQnp_m0fBvPfug/viewform?usp=header" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Elegant Blooms. All rights reserved.</p>
+  </footer>
+
+  <script>
+      // navbar
+
+      const menuToggle = document.getElementById('mobile-menu');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+    // Toggle icon class between 'bx-menu' and 'bx-x'
+      if (menuToggle.classList.contains('bx-menu')) {
+      menuToggle.classList.replace('bx-menu', 'bx-x');
+    } else {
+      menuToggle.classList.replace('bx-x', 'bx-menu');
+    }
+  });
+  </script>
 </body>
 </html>

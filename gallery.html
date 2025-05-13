@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery | Elegant Blooms</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <style>
     .gallery-container {
       max-width: 1200px;
@@ -70,6 +71,13 @@
     .gallery-item.hidden {
       display: none;
     }
+
+    @media (max-width: 768px){
+    .gallery-grid {
+      column-count: 2;
+      column-gap: 1em;
+    }
+    }
   </style>
 </head>
 <body>
@@ -78,6 +86,8 @@
 
   <nav class="nav">
     <div class="logo">Elegant Blooms</div>
+
+    <i class='bx bx-menu' id="mobile-menu"></i>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <li><a href="contact.html">Order</a></li>
@@ -175,6 +185,22 @@
         }
       });
     }
+
+        // navbar
+
+      const menuToggle = document.getElementById('mobile-menu');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+    // Toggle icon class between 'bx-menu' and 'bx-x'
+      if (menuToggle.classList.contains('bx-menu')) {
+      menuToggle.classList.replace('bx-menu', 'bx-x');
+    } else {
+      menuToggle.classList.replace('bx-x', 'bx-menu');
+    }
+  });
   </script>
 </body>
 </html>
